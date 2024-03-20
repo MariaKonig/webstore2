@@ -16,10 +16,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 productCard.innerHTML = `
                 <div class="card h-100">
                     <img class="card-img-top" src="${product.image}" alt="${product.title}">
-                    <div class="card-body">
-                        <h4 class="card-title">${product.title}</h4>
-                        <p class="card-text">$${product.price}</p>
-                        <p class="card-text">${product.description}</p>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h4 class="card-title">${product.title}</h4>
+                            <p class="card-text">$${product.price}</p>
+                            <p class="card-text">${product.description}</p>
+                        </div>
                         <button class="btn btn-primary btn-order" data-product="${product.title}" data-price="${product.price}" data-description="${product.description}">Beställ</button>
                     </div>
                 </div>
