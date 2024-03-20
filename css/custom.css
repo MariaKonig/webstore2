@@ -1,0 +1,17 @@
+.navbar {
+    background-color: rgba(127, 187, 255, 0.5);
+    font-family: 'Roboto', sans-serif; /* Typsnitt */
+    font-weight: bold;
+    padding: 50px;
+    margin: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+  .navbar-brand {
+    font-size: 3.0rem;
+  }
+  
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+}
