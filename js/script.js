@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const productDescription = event.target.getAttribute('data-description');
 
             // Skapa en URL för beställningsformuläret med produktinformationen som query parametrar
-            const orderFormUrl = `beställning.html?product=${encodeURIComponent(productName)}&price=${encodeURIComponent(productPrice)}&description=${encodeURIComponent(productDescription)}`;
+            const orderFormUrl = `order.html?product=${encodeURIComponent(productName)}&price=${encodeURIComponent(productPrice)}&description=${encodeURIComponent(productDescription)}`;
 
             // Omdirigera användaren till beställningsformuläret
             window.location.href = orderFormUrl;

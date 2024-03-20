@@ -8,7 +8,6 @@
   <link rel="shortcut icon" href="../favicon.ico" type="favicon.ico">
   <link rel="stylesheet" href="../css/bootstrap.css">
   <link rel="stylesheet" href="../css/custom.css">
-  <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -32,22 +31,50 @@
     <!-- Beställningsformulär -->
     <h3 style="text-align: center;">Beställningsformulär</h3>
     <div class="form-container">
-      <form id="order-form" action="bekräftelse.html" method="post">
-
-        <label for="namn">Namn</label><br>
-        <input type="text" name="namn" id="namn" placeholder="Förnamn Efternamn"><br>
-
-        <label for="telefon">Telefonnummer</label><br>
-        <input type="nummer" name="telefon" id="telefon" placeholder="Telefonnummer">
-
-        <label for="email">Email</label><br>
-        <input type="email" name="email" id="email" placeholder="name@example.com"><br>
-
-        <label for="namn">Leveransadress</label><br>
-        <input type="text" name="Leveransadress" id="adress" placeholder="Leveransadress"><br>
+      <form id="order-form" action="bekräftelse.html" method="post" class="needs-validation" novalidate>
+        <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8 mb-2">
+        <label for="namn" class="form-label">Namn</label>
+        <input type="namn" name="namn" id="namn" placeholder="Förnamn Efternamn" class="form-control" maxlength="50">
+        <div class="invalid-feedback">
+          Ange ett giltigt namn.
+        </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8 mb-2">
+        <label for="telefon" class="form-label">Telefonnummer</label>
+        <input type="telefon" name="telefon" id="telefon" placeholder="Telefonnummer" class="form-control" maxlength="50">
+        <div class="invalid-feedback">
+          Ange ett giltigt nummer.
+        </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8 mb-2">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" name="email" id="email" placeholder="name@example.com" class="form-control" maxlength="50">
+        <div class="invalid-feedback">
+          Ange en giltig emailadress.
+        </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8 mb-2">
+        <label for="namn" class="form-label">Leveransadress</label>
+        <input type="adress" name="Leveransadress" id="adress" placeholder="Gatuadress Postnummer Ort" class="form-control" maxlength="107">
+        <div class="invalid-feedback">
+          Ange en giltig adress.
+        </div>
+        </div>
+        </div>
 
         <div class="btn-wrapper">
-          <input type="submit" value="Skicka">
+          <button class="btn btn-primary" type="submit" value="Skicka" id="send">Beställ</button>
         </div>
       </form>
     </div>
@@ -80,6 +107,7 @@
       </div>
     </div>
   </div>
+  <script src="../js/main.js"></script>
   <script src="../js/script.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
