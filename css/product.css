@@ -1,0 +1,5 @@
+.product-container img {
+    height: 240px;
+    object-fit: scale-down;
+    background-color: white;
+}
