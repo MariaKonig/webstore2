@@ -50,10 +50,10 @@ teamList.forEach((member) => {
   let teamMember = document.createElement("div");
   teamMember.classList.add("col-lg-auto", "col-md-5", "col-sm-6", "mb-4");
   teamMember.innerHTML = `
-                <div class="card h-100 align-items-center">
+                <div class="card h-100 align-items-center mx-auto">
                     <img class="card-img-top rounded-circle border border-3 border-primary" src="${member.photoLink}" alt="${member.name}">
                     <div class="card-body mx-auto">
-                        <h4 class="card-title mx-auto">${member.name}</h4>
+                        <h4 class="card-title text-center">${member.name}</h4>
                         <a class="btn btn-primary" href="${member.linkedInLink}" target="_blank">Besök LinkedIn</a>
                         <a class="btn btn-primary" href="${member.gitHubLink}" target="_blank">Besök GitHub</a>
                     </div>
