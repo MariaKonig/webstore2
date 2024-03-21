@@ -12,17 +12,19 @@ document.addEventListener('DOMContentLoaded', function () {
             data.forEach(product => {
                 // Skapa produktkort
                 const productCard = document.createElement('div');
-                productCard.classList.add('col-lg-3', 'col-md-4', 'col-sm-6', 'mb-4', "product-container");
+                productCard.classList.add('col-lg-3', 'col-md-4', 'col-sm-6', 'mb-4', 'product-container');
+                productCard.setAttribute('data-product', `${product.title}`);
+                productCard.setAttribute('data-price', `${product.price}`)
+                productCard.setAttribute('data-description', `${product.description}`)
                 productCard.innerHTML = `
                 <div class="card h-100">
                     <img class="card-img-top" src="${product.image}" alt="${product.title}">
                     <div class="card-body d-flex flex-column justify-content-between">
-                        <div>
+                        <div data-bs-toggle="offcanvas" data-bs-target="#offcanvas-product" aria-controls="offcanvas-product">
                             <h4 class="card-title">${product.title}</h4>
                             <p class="card-text">$${product.price}</p>
-                            <p class="card-text">${product.description}</p>
                         </div>
-                        <button class="btn btn-primary btn-order" data-product="${product.title}" data-price="${product.price}" data-description="${product.description}">Beställ</button>
+                        <button class="btn btn-primary btn-order">Beställ</button>
                     </div>
                 </div>
             `;
@@ -33,15 +35,15 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error('Fetch error:', error);
         });
 
-    // Hantera klickhändelsen för beställningsknappen
+    // Hantera klickhändelser
     document.addEventListener('click', function (event) {
+        // Hämta produktinformation
+        const productName = event.target.closest('[data-product]').getAttribute('data-product');
+        const productPrice = event.target.closest('[data-price]').getAttribute('data-price');
+        const productDescription = event.target.closest('[data-description]').getAttribute('data-description');
+
         if (event.target.classList.contains('btn-order')) {
             event.preventDefault();
-
-            // Hämta produktinformation från knappen
-            const productName = event.target.getAttribute('data-product');
-            const productPrice = event.target.getAttribute('data-price');
-            const productDescription = event.target.getAttribute('data-description');
 
             // Skapa en URL för beställningsformuläret med produktinformationen som query parametrar
             const orderFormUrl = `order.html?product=${encodeURIComponent(productName)}&price=${encodeURIComponent(productPrice)}&description=${encodeURIComponent(productDescription)}`;
@@ -49,6 +51,10 @@ document.addEventListener('DOMContentLoaded', function () {
             // Omdirigera användaren till beställningsformuläret
             window.location.href = orderFormUrl;
 
+            // Sätter produktinfo i offcanvas
+        } else {
+            document.getElementById('offcanvas-product-title').innerHTML = productName
+            document.getElementById('offcanvas-product-description').innerHTML = productDescription
         }
     });
 
