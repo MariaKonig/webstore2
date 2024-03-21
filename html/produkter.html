@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webbshop - Produkter</title>
+    <link rel="shortcut icon" href="../favicon2.ico" type="favicon.ico" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Webbshop - Produkter</title>
-  <link rel="shortcut icon" href="../favicon.ico" type="favicon.ico">
-  <link rel="stylesheet" href="../css/bootstrap.css">
-  <link rel="stylesheet" href="../css/custom.css">
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-sm navbar-dark">
+  <body>
+   <nav class="navbar navbar-expand-sm navbar-dark">
       <div class="container-fluid"> 
           <a class="navbar-brand" href="home-page.html"><img src="/logo2tr.png" alt="Logo" height="80"></a>
   
@@ -36,16 +35,21 @@
       </form>
       
   </nav>
-  <div class="container pt-5">
-    <!-- Produkerna listas här -->
-    <h2 id="product-page">Produkter</h2>
-    <div class="row" id="product-list">
+   <div class="container pt-5">
+      <!-- Produkerna listas här -->
+      <h2 id="product-page">Produkter</h2>
+      <div class="row" id="product-list"></div>
     </div>
-  </div>
 
-  <script src="../js/script.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-</body>
+    <hr />
+    <footer>
+      <div class="container text-center">
+        Copyright &copy; <span id="cRyear"></span>
+      </div>
+    </footer>
 
+    <script src="../js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
