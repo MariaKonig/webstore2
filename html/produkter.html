@@ -2,16 +2,53 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Webbshop - Produkter</title>
-  <link rel="shortcut icon" href="../favicon.ico" type="favicon.ico">
-  <link rel="stylesheet" href="../css/bootstrap.css">
-  <link rel="stylesheet" href="../css/custom.css">
-  <link rel="stylesheet" href="../css/product.css">
+  <link rel="shortcut icon" href="../favicon2.ico" type="favicon.ico" />
+  <link rel="stylesheet" href="../css/bootstrap.css" />
+  <link rel="stylesheet" href="../css/custom.css" />
+  <link rel="stylesheet" href="../css/product.css" />
 </head>
 
 <body>
+  <nav class="navbar navbar-expand-sm navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="home-page.html"><img src="../logo2tr.png" alt="Logo" height="80"></a>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="home-page.html">Hem</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="produkter.html">Produkter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="om-oss.html">Om oss</a>
+          </li>
+        </ul>
+
+      </div>
+
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Sök på en produkt..." aria-label="Search">
+        <button class="btn btn-outline-primary" type="submit">Sök</button>
+      </form>
+
+  </nav>
+  <div class="container pt-5">
+    <!-- Produkerna listas här -->
+    <h2 id="product-page">Produkter</h2>
+    <div class="row" id="product-list"></div>
+  </div>
+
+  <hr />
+  <footer>
+    <div class="container text-center">
+      Copyright &copy; <span id="cRyear"></span>
+    </div>
+  </footer>
   <!--offcanvas-->
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-product" aria-labelledby="offcanvas-product-title">
     <div class="offcanvas-header">
@@ -21,26 +58,6 @@
     <div id="offcanvas-product-description" class="offcanvas-body">
       Offcanvas product description.
     </div>
-  </div>
-
-
-  <div class="container pt-5">
-    <!-- Navbar -->
-    <nav class="navbar navbar-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="../html/home-page.html">Webbshop</a>
-      </div>
-    </nav>
-    <!-- Meny -->
-    <div class="d-flex justify-content-center align-items-center">
-      <h4 class="menu-item mx-4"><a href="home-page.html" class="menu-link">Startsida</a></h4>
-      <h4 class="menu-item mx-4"><a href="#" class="menu-link">Produkter</a></h4>
-      <h4 class="menu-item mx-4"><a href="../html/om-oss.html" class="menu-link">Om oss</a></h4>
-    </div>
-
-    <!-- Produkerna listas här -->
-    <h2 id="product-page">Produkter</h2>
-    <div class="row" id="product-list"></div>
   </div>
 
   <script src="../js/script.js"></script>

@@ -5,35 +5,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Startsida</title>
-    <link rel="shortcut icon" href="../favicon.ico" type="favicon.ico">
+    <link rel="shortcut icon" href="../favicon2.ico" type="favicon.ico">
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/custom.css">
 </head>
 
 <body>
-    <div class="container pt-5">
-        <!-- Navbar -->
-        <nav class="navbar navbar-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="../html/home-page.html">Webbshop</a>
-        </nav>
 
-        <!-- Meny -->
-        <div class="d-flex justify-content-center align-items-center">
-            <h4 class="menu-item mx-4"><a href="#" class="menu-link">Startsida</a></h4>
-            <h4 class="menu-item mx-4"><a href="../html/produkter.html" class="menu-link">Produkter</a></h4>
-            <h4 class="menu-item mx-4"><a href="../html/om-oss.html" class="menu-link">Om oss</a></h4>
+    <nav class="navbar navbar-expand-sm navbar-dark">
+        <div class="container-fluid"> 
+            <a class="navbar-brand" href="home-page.html"><img src="../logo2tr.png" alt="Logo" height="80"></a>
 
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="home-page.html">Hem</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="produkter.html">Produkter</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="om-oss.html">Om oss</a>
+                  </li>
+                </ul>
         </div>
+       <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Sök på en produkt..." aria-label="Search">
+          <button class="btn btn-outline-primary" type="submit">Sök</button>
+        </form>
+        
+    </nav>
+    
+    <div class="container pt-5 text-center">
+          <h1>Välkommen till Group 2shoP</h1>
+          <p>Härligt att se att du har glidit in till oss!</p>
+          <p>Här kan du hitta ett brett utbud av produkter till fantastiska priser. Bläddra igenom vår katalog och gör din beställning idag.</p>
+          <p>Ta gärna en titt på vår "Om oss"-sida för utterligare information om teamet bakom webshoppen.</p>
+          <img class="img-fluid centeredX z-n1" src="https://68.media.tumblr.com/7796b1444c4697326fcbdac3a904a502/tumblr_or57fw1u4z1wrrjawo2_250.gif" alt="Sliding otter">
+    </div>
+  <br>
+  <br>
+  <br>
+  <br>
+    <hr>
+    <footer>
+        <div class="container text-center">Copyright &copy; <span id="cRyear"></span>
+        </div>
+    </footer>
 
-        <h1>Välkommen till vår webbshop</h1>
-        <p>Här kan du hitta ett brett utbud av produkter till fantastiska priser.
-            Bläddra igenom vår katalog nedan och gör din beställning idag.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam facere eius neque optio. Ipsa quisquam
-            ratione quam alias
-            accusantium dolore fuga voluptate repellendus porro a aliquid consequuntur quia, facere dolor.</p>
-    </div>
-    </div>
+    <script src="../js/script.js"></script>
+
 </body>
 
 </html>
