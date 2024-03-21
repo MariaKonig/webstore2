@@ -17,7 +17,7 @@ const validName = /^[\p{L}\p{M}\-]{2,}\s[\p{L}\p{M}\-]{2,}$/iu
 checkInput(nameInput, validName)
 
 const phoneInput = document.getElementById('telefon')
-const validPhone = /^[\d()-]{8,}$/
+const validPhone = /^[\d()-]{10,}$/
 checkInput(phoneInput, validPhone)
 
 const emailInput = document.getElementById('email')
