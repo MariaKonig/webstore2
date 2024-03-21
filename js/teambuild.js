@@ -4,7 +4,7 @@ let teamList = [];
 const josefBoukdir = {
   name: "Josef Boukdir",
   photoLink:
-    "https://media.licdn.com/dms/image/D4D03AQHC81cd0EE8wg/profile-displayphoto-shrink_400_400/0/1708376304077?e=1716422400&v=beta&t=UmDmV7fQfAoMTzLzOg7NaP4v2qLbOy6OR8oKzChiLo0",
+    "https://media.licdn.com/dms/image/D4D03AQHC81cd0EE8wg/profile-displayphoto-shrink_200_200/0/1708376304077?e=1716422400&v=beta&t=7C1TD9XSj1giHU1S9TwelpgKlmexfuXJH373n2QLbuo",
   linkedInLink: "https://www.linkedin.com/in/josefboukdir/",
   gitHubLink: "https://github.com/berberapan",
 };
@@ -13,7 +13,7 @@ teamList.push(josefBoukdir);
 const joachimKarlsson = {
   name: "Joachim Karlsson",
   photoLink:
-    "https://media.licdn.com/dms/image/D4D03AQEhZS_75NnpSg/profile-displayphoto-shrink_400_400/0/1698692356572?e=1716422400&v=beta&t=N5PbvU4RbF5lRJMeCspoPknFvcwUH9QXgzRy_tWmoeo",
+    "https://media.licdn.com/dms/image/D4D03AQEhZS_75NnpSg/profile-displayphoto-shrink_200_200/0/1698692356572?e=1716422400&v=beta&t=vSgFJeWxdeYTqJz6MveEcxqMRKZqkZjkQO6hYYmsRZw",
   linkedInLink: "https://www.linkedin.com/in/joachim-karlsson-568183189/",
   gitHubLink: "https://github.com/Jaikem1",
 };
@@ -22,7 +22,7 @@ teamList.push(joachimKarlsson);
 const mariaKönig = {
   name: "Maria König",
   photoLink:
-    "https://media.licdn.com/dms/image/D5603AQHn2TaJKfyUxg/profile-displayphoto-shrink_400_400/0/1696448314908?e=1716422400&v=beta&t=EqEae6vIOvhblSUD94pUwR9G5VhR5uCQweXQuxdfN0o",
+    "https://media.licdn.com/dms/image/D5603AQHn2TaJKfyUxg/profile-displayphoto-shrink_200_200/0/1696448314908?e=1716422400&v=beta&t=8F-UjiAXMo2dXusGs6NZTGS0yhs7vmWTCc1bEw4uIdk",
   linkedInLink: "https://www.linkedin.com/in/maria-k%C3%B6nig-42b2aa197",
   gitHubLink: "https://github.com/MariaKonig",
 };
@@ -31,7 +31,7 @@ teamList.push(mariaKönig);
 const malinPatriksson = {
   name: "Malin Patriksson",
   photoLink:
-    "https://media.licdn.com/dms/image/D4D03AQGcQrjEZxmXLg/profile-displayphoto-shrink_400_400/0/1662124623374?e=1716422400&v=beta&t=n9ohQtm2ATP_905g7HnPjHy5tXGhrzXZb2gyjHUgXxk",
+    "https://media.licdn.com/dms/image/D4D03AQGcQrjEZxmXLg/profile-displayphoto-shrink_200_200/0/1662124623374?e=1716422400&v=beta&t=xbfpft9YLzvwq2zbLslznFxz3O5Rzr3yOwozZkVCP_0",
   linkedInLink: "https://www.linkedin.com/in/malin-patriksson-279072159/",
   gitHubLink: "https://github.com/MalinPatriksson",
 };
