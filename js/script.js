@@ -39,58 +39,19 @@ document.addEventListener("DOMContentLoaded", function () {
       // Hämta produktinformation från knappen
       const productName = event.target.getAttribute("data-product");
       const productPrice = event.target.getAttribute("data-price");
-      const productDescription = event.target.getAttribute("data-description");
 
       // Skapa en URL för beställningsformuläret med produktinformationen som query parametrar
       const orderFormUrl = `order.html?product=${encodeURIComponent(
         productName
       )}&price=${encodeURIComponent(
         productPrice
-      )}&description=${encodeURIComponent(productDescription)}`;
-
+      )}`;
+      
       // Omdirigera användaren till beställningsformuläret
       window.location.href = orderFormUrl;
     }
   });
+}); 
 
-  // Hantera formulärets submit-händelse på beställningssidan
-  const form = document.getElementById("order-form");
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    // Hämta användarens uppgifter från formuläret
-    const name = document.getElementById("namn").value;
-    const phone = document.getElementById("telefon").value;
-    const email = document.getElementById("email").value;
-    const address = document.getElementById("adress").value;
-
-    // Hämta produktinformation från URL-parametrarna
-    const urlParams = new URLSearchParams(window.location.search);
-    const productName = urlParams.get("product");
-    const productPrice = urlParams.get("price");
-    const productDescription = urlParams.get("description");
-
-    // Fyll i modalfönstret med användarens uppgifter och produktinformation
-    document.getElementById("modalProductName").textContent = productName;
-    document.getElementById(
-      "modalProductPrice"
-    ).textContent = `$${productPrice}`;
-    document.getElementById("modalProductDescription").textContent =
-      productDescription;
-    document.getElementById("modalName").textContent = name;
-    document.getElementById("modalPhone").textContent = phone;
-    document.getElementById("modalEmail").textContent = email;
-    document.getElementById("modalAddress").textContent = address;
-
-    // Visa modalfönstret
-    const successModal = new bootstrap.Modal(
-      document.getElementById("successModal")
-    );
-    successModal.show();
-
-    // Återställ formuläret
-    form.reset();
-  });
-});
 
 document.getElementById("cRyear").innerHTML = new Date().getFullYear();
