@@ -48,7 +48,11 @@ document.addEventListener('DOMContentLoaded', function () {
       event.preventDefault();
 
       // Skapa en URL för beställningsformuläret med produktinformationen som query parametrar
-      const orderFormUrl = `order.html?product=${encodeURIComponent(productName)}&price=${encodeURIComponent(productPrice)}&description=${encodeURIComponent(productDescription)}`;
+      const orderFormUrl = `order.html?product=${encodeURIComponent(
+        productName
+      )}&price=${encodeURIComponent(
+        productPrice
+      )}`;
 
       // Omdirigera användaren till beställningsformuläret
       window.location.href = orderFormUrl;
@@ -59,28 +63,6 @@ document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('offcanvas-product-description').innerHTML = productDescription
     }
   });
+});
 
-  // Hantera klickhändelsen för beställningsknappen
-  document.addEventListener("click", function (event) {
-    if (event.target.classList.contains("btn-order")) {
-      event.preventDefault();
-
-      // Hämta produktinformation från knappen
-      const productName = event.target.getAttribute("data-product");
-      const productPrice = event.target.getAttribute("data-price");
-
-      // Skapa en URL för beställningsformuläret med produktinformationen som query parametrar
-      const orderFormUrl = `order.html?product=${encodeURIComponent(
-        productName
-      )}&price=${encodeURIComponent(
-        productPrice
-      )}`;
-      
-      // Omdirigera användaren till beställningsformuläret
-      window.location.href = orderFormUrl;
-    }
-  });
-}); 
-
-
-document.getElementById("cRyear").innerHTML = new Date().getFullYear();
+document.getElementById('cRyear').innerHTML = new Date().getFullYear();
