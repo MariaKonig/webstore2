@@ -69,7 +69,7 @@ form.addEventListener("submit", function (event) {
 
         // Fyll i modalfönstret med användarens uppgifter och produktinformation
         document.getElementById("modalProductName").textContent = productName;
-        document.getElementById("modalProductPrice").textContent = productPrice;
+        document.getElementById("modalProductPrice").textContent = `$${productPrice}`;
         document.getElementById("modalName").textContent = name;
         document.getElementById("modalPhone").textContent = phone;
         document.getElementById("modalEmail").textContent = email;
