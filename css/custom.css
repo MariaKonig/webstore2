@@ -22,10 +22,10 @@
 }
 
 .centeredX {
-  position: absolute;
-  top: 55%;
+  position: relative;
+  top: 99%;
   left: 50%;
-  transform: translate(-50%, -45%);
+  transform: translate(-50%, -1%);
 }
 
 .startPageImage {display: inline-block; max-width: 800px; max-height: 800px;}
