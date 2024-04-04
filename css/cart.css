@@ -1,0 +1,85 @@
+svg {
+    width: 30px;
+}
+
+.icon-cart {
+    display: flex;
+    align-items: flex-end;
+    margin-right: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.icon-cart span {
+    position: absolute;
+    right: -15px;
+}
+
+
+.cart-list .item {
+    display: grid;
+    grid-template-columns: 150px 50px 90px 30px;
+    gap: 7px;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-list .quantity span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #eee;
+    color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cart-list .quantity span:nth-child(2) {
+    background-color: transparent;
+    color: #eee;
+}
+
+.cart-list {
+    overflow: auto;
+}
+
+
+
+#total {
+    font-weight: 500;
+    font-size: larger;
+    position: relative;
+    text-align: center;
+    margin: 16px;
+}
+
+button.checkout-button {
+    font-size: larger;
+    cursor: pointer;
+}
+
+#order-products {
+    overflow-y: scroll;
+}
+
+.modal-body {
+    overflow: hidden;
+    overflow-y: scroll;
+    max-height: 60vh;
+}
+
+#modalTotal {
+    font-size: larger;
+    font-weight: 400;
+}
+
+.remove {
+    cursor: pointer;
+}
+
+#empty-cart {
+    cursor: pointer;
+    margin-left: 10px;
+    padding-bottom: 2px;
+}

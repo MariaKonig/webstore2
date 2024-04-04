@@ -1,8 +1,8 @@
 
 // Form validation. 
 function checkInput(userInput, rule) {
-    userInput.addEventListener('input', function(){
-        if(rule.test(userInput.value)) {
+    userInput.addEventListener('input', function () {
+        if (rule.test(userInput.value)) {
             userInput.classList.remove('is-invalid')
             userInput.classList.add('is-valid')
         } else {
@@ -30,7 +30,7 @@ checkInput(addressInput, validAddress)
 
 // Redirect when closing modal in order.html.
 const modalID = document.getElementById('successModal')
-modalID.addEventListener('hidden.bs.modal', function(){
+modalID.addEventListener('hidden.bs.modal', function () {
     location.replace("produkter.html")
 })
 
@@ -38,8 +38,8 @@ const inputs = [nameInput, phoneInput, emailInput, addressInput]
 const sendButton = document.getElementById('send')
 
 inputs.forEach(input => {
-    input.addEventListener('keyup', function(){
-        if(checkField(nameInput) && checkField(phoneInput) && checkField(emailInput) && checkField(addressInput)) {
+    input.addEventListener('keyup', function () {
+        if (checkField(nameInput) && checkField(phoneInput) && checkField(emailInput) && checkField(addressInput)) {
             sendButton.classList.remove('disabled')
         } else {
             sendButton.classList.add('disabled')
@@ -54,8 +54,8 @@ function checkField(userInput) {
 const form = document.getElementById('order-form')
 form.addEventListener("submit", function (event) {
     event.preventDefault();
-    if(checkField(nameInput) && checkField(phoneInput) && checkField(emailInput) && checkField(addressInput)) {
-    
+    if (checkField(nameInput) && checkField(phoneInput) && checkField(emailInput) && checkField(addressInput)) {
+
         // Hämta användarens uppgifter från formuläret
         const name = document.getElementById("namn").value;
         const phone = document.getElementById("telefon").value;
@@ -68,8 +68,21 @@ form.addEventListener("submit", function (event) {
         const productPrice = urlParams.get("price");
 
         // Fyll i modalfönstret med användarens uppgifter och produktinformation
-        document.getElementById("modalProductName").textContent = productName;
-        document.getElementById("modalProductPrice").textContent = `$${productPrice}`;
+        const productList = document.getElementById("order-products");
+        const total = document.getElementById("modalTotal");
+        let sum = 0
+        const costumer = JSON.parse(localStorage.getItem('costumer'));
+        costumer.products.forEach(product => {
+            const prodName = document.createElement("p");
+            prodName.innerHTML = `<span>${product.quantity} x ${product.title}<span>`
+            const prodPrice = document.createElement("p");
+            prodPrice.innerHTML = `<span>$${product.price}<span>`
+            productList.appendChild(prodName)
+            productList.appendChild(prodPrice)
+            sum += (product.price * product.quantity)
+        })
+        sum = parseFloat(sum).toFixed(2)
+        total.innerHTML = `Total summa: $${sum}`
         document.getElementById("modalName").textContent = name;
         document.getElementById("modalPhone").textContent = phone;
         document.getElementById("modalEmail").textContent = email;
@@ -77,8 +90,12 @@ form.addEventListener("submit", function (event) {
 
         // Visa modalfönstret
         const successModal = new bootstrap.Modal(
-        document.getElementById("successModal")
+            document.getElementById("successModal")
         );
         successModal.show();
+        //Tömmer produktlistan från localstorage
+        const customer = JSON.parse(localStorage.getItem('customer'))
+        customer.products = []
+        localStorage.setItem('customer', JSON.stringify(customer))
     }
 })
